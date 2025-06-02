@@ -35,16 +35,16 @@
   </head>
   <body class="dark:bg-[#213555] bg-gray-100">
     <header
-      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#161179]"
+      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#161179] sticky top-0"
     >
       <nav
-        class="relative w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-2"
+        class="relative w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-3"
       >
         <div
           class="flex items-center justify-between duration-500 lg:hover:translate-y-[-5px] min-md:pl-5"
         >
           <a
-            class="flex-none font-semibold text-xl text-white/80 hover:text-white focus:outline-hidden focus:opacity-80"
+            class="flex-none font-semibold text-2xl text-white hover:text-gray-200 focus:outline-hidden focus:opacity-80"
             href="./index.html"
             aria-label="Brand"
             >Dev</a
@@ -106,7 +106,7 @@
               class="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1"
             >
               <a
-                class="p-2 flex items-center text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
                 href="./src/Courses.html"
                 aria-current="page"
               >
@@ -130,7 +130,7 @@
                 Courses
               </a>
               <a
-                class="p-2 flex items-center text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+              class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
                 href="./src/Contact_Us.html"
               >
                 <svg
@@ -151,7 +151,7 @@
                 Contact
               </a>
               <a
-                class="p-2 flex items-center text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
                 href="./src/About_Us.html"
               >
                 <svg
@@ -177,7 +177,7 @@
                 class="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5 mt-1 md:mt-0 md:ms-1.5 before:block before:absolute before:top-1/2 before:-start-px before:w-px before:h-4 before:bg-white/30 before:-translate-y-1/2"
               >
                 <a
-                  class="p-2 w-full flex items-center text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                  class="p-2 w-full flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
                   href="./src/Login_Register.html"
                 >
                   <svg
@@ -199,7 +199,7 @@
                 </a>
               </div>
               <div
-                class="flex min-md:pr-5 max-sm:pl-2 duration-500 lg:hover:scale-105"
+                class="flex min-md:px-5 max-sm:py-3 max-sm:pl-2 duration-500 lg:hover:scale-105"
               >
                 <label class="inline-flex items-center cursor-pointer">
                   <input
@@ -230,7 +230,7 @@
           class="relative"
         >
           <div
-            class="hs-carousel relative overflow-hidden w-full lg:h-[600px] md:h-96 sm:h-68 h-[500px] bg-white"
+            class="hs-carousel relative overflow-hidden w-full lg:h-[635px] md:h-96 h-[600px] bg-white"
           >
             <div
               class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0"
@@ -323,7 +323,7 @@
           </button>
 
           <div
-            class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"
+            class="hs-carousel-pagination justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"
           ></div>
         </div>
       </section>
@@ -331,7 +331,7 @@
       <section>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div class="pb-12 max-lg:pb-10 max-md:pb-9">
-            <div class="border-l-8 pl-4 border-red-600">
+            <div class="border-l-8 pl-4 border-red-600" data-aos="fade-right">
               <h2
                 class="text-5xl font-bold text-[#161179] dark:text-white max-lg:text-3xl max-md:text-2xl"
               >
@@ -339,7 +339,7 @@
               </h2>
             </div>
           </div>
-          <div class="pb-12 max-lg:pb-10 max-md:pb-9" data-aos="flip-left">
+          <div class="pb-12 max-lg:pb-10 max-md:pb-9" data-aos="fade-right">
             <h2
               class="text-4xl font-semibold max-lg:text-3xl max-md:text-2xl dark:text-white text-[#161179]"
             >
@@ -411,7 +411,7 @@
         </div>
         <div
           class="px-4 sm:px-6 lg:px-8 max-w-[85rem] m-auto"
-          data-aos="zoom-in-right"
+          data-aos="fade-right"
         >
           <img
             class="rounded-lg"
@@ -427,7 +427,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
         <div class="duration-500 lg:hover:translate-y-[-5px]">
           <a
-            class="max-sm:flex max-sm:justify-center text-xl font-semibold text-white/80 hover:text-white focus:outline-hidden"
+            class="max-sm:flex max-sm:justify-center text-2xl font-semibold text-white hover:text-gray-200 focus:outline-hidden"
             href="./index.html"
             aria-label="Brand"
             >Dev</a
@@ -438,7 +438,7 @@
             class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
           >
             <a
-              class="inline-flex gap-x-2 text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
               href="./src/About_Us.html"
             >
               About
@@ -448,7 +448,7 @@
             class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
           >
             <a
-              class="inline-flex gap-x-2 text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
               href="./src/Courses.html"
             >
               Courses
@@ -458,7 +458,7 @@
             class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300"
           >
             <a
-              class="inline-flex gap-x-2 text-sm text-white/80 hover:text-white focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
+              class="inline-flex gap-x-2 text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-gray-800 duration-500 lg:hover:translate-y-[-5px]"
               href="./src/Contact_Us.html"
             >
               Contact
@@ -467,7 +467,7 @@
         </ul>
         <div class="md:text-end space-x-2 m-auto">
           <a
-            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:text-gray-50 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
             href="https://web.facebook.com/istad.co"
             target="_blank"
           >
@@ -476,7 +476,7 @@
             ></i>
           </a>
           <a
-            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:text-gray-50 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
             href="https://www.youtube.com/@istad7665"
             target="_blank"
           >
@@ -485,7 +485,7 @@
             ></i>
           </a>
           <a
-            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:text-gray-50 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
             href="https://www.tiktok.com/@istad369?is_from_webapp=1&sender_device=pc"
             target="_blank"
           >
@@ -494,7 +494,7 @@
             ></i>
           </a>
           <a
-            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:text-gray-50 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+            class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-white hover:text-gray-200 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
             href="https://t.me/istadckh"
             target="_blank"
           >
