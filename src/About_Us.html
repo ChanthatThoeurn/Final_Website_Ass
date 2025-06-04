@@ -10,15 +10,33 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
 
   <!-- AOS CSS CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
 
   <title>Elearning</title>
+  <script>
+    document.documentElement.classList.toggle(
+      "dark",
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+  </script>
+
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-[#213555]">
   <header>
     <section>
       <nav class="bg-sky-700 p-5 ">
@@ -38,19 +56,19 @@
 
   <!-- 
 container -->
-  <div class="m-auto w-[90%]">
+  <div class="m-auto max-w-[85rem] px-8 py-10 max-sm:px-6 lg:px-8 lg:py-14">
     <!-- Make sure you have AOS CSS in <head> and AOS JS at end of <body> -->
-    <section class="mb-10 text-center" data-aos="zoom-in" data-aos-duration="1000">
-      <h1 class="text-2xl text-red-500 font-bold mb-3">ABOUT US</h1>
-      <h1 class="text-5xl md:text-6xl text-blue-600 font-bold leading-snug">
-        INSTITUTION OF SCIENCE AND <br>
-        TECHNOLOGY ADVANCED <br>
+    <section class="mb-10 " data-aos="zoom-in" data-aos-duration="1000">
+      <h1 class="text-2xl text-red-600 font-bold mb-3 ">ABOUT US</h1>
+      <h1 class="lg:text-5xl text-2xl text-[#161179] font-bold leading-snug dark:text-white">
+        INSTITUTION OF SCIENCE AND
+        TECHNOLOGY ADVANCED
         DEVELOPMENT?
       </h1>
     </section>
 
     <!-- MAIN CONTENT GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
       <!-- LEFT CONTENT -->
       <div class="space-y-10">
@@ -60,11 +78,11 @@ container -->
           <div class="flex items-start space-x-4">
             <div class="w-2.5 h-30 bg-red-600"></div>
             <div>
-              <p class="text-indigo-800 uppercase text-2xl font-semibold tracking-wide mb-1 ">
+              <p class="text-[#161179] uppercase lg:text-2xl text-xl font-semibold tracking-wide mb-1 dark:text-white">
                 Why should you choose us?
               </p>
-              <h1 class="text-4xl font-bold text-indigo-900 leading-tight">
-                ISTAD <br /> Institute
+              <h1 class="lg:text-4xl text-2xl font-bold text-[#161179] tracking-[5px] dark:text-white">
+                STUDY <br /> SMART
               </h1>
             </div>
           </div>
@@ -75,11 +93,12 @@ container -->
 
           <div class="flex items-center space-x-3 text-4xl">
 
-            <i class="fa-solid fa-diamond  text-gray-400 "></i>
+            <i class="fa-solid fa-diamond text-[#161179] dark:text-red-600"></i>
           </div>
-          <h1 class="text-black text-4xl md:text-5xl font-bold">WHO ARE WE?</h1>
+          <h1 class="text-black lg:text-5xl text-2xl font-bold dark:text-white">WHO ARE WE?</h1>
         </section>
-        <p class="text-lg md:text-2xl text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-lg md:text-2xl text-gray-700 leading-relaxed text-justify dark:text-white" data-aos="fade-up"
+          data-aos-delay="200">
           INSTITUTE is a noteworthy science and technology Institute in Cambodia. It has routed Cambodian students
           to advanced science and technology, research, and development. Our graduates have been guaranteed excellent
           job opportunities with top IT companies. We continue to provide high-quality training with modern methodology,
@@ -91,37 +110,37 @@ container -->
           <div class="flex items-center space-x-3">
             <div class="flex items-center space-x-3 text-4xl">
 
-              <i class="fa-solid fa-diamond  text-blue-800 "></i>
+              <i class="fa-solid fa-diamond text-[#161179] dark:text-red-600"></i>
             </div>
-            <h1 class="text-black text-4xl md:text-5xl font-bold">VISION & MISSION</h1>
+            <h1 class="text-black lg:text-5xl text-2xl font-bold dark:text-white">VISION & MISSION</h1>
           </div>
 
           <!-- VISION -->
           <div class="flex items-center mt-4" data-aos="fade-up">
-            <i class="fa-solid fa-gem text-blue-500 text-3xl"></i>
-            <h2 class="text-2xl md:text-3xl font-bold ml-2">OUR VISION</h2>
+            <i class="fa-solid fa-gem text-[#161179] text-3xl dark:text-red-600"></i>
+            <h2 class="text-2xl md:text-3xl font-bold ml-2 dark:text-white text-black">OUR VISION</h2>
           </div>
-          <p class="text-lg md:text-2xl ml-9 text-gray-700" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-lg md:text-2xl m-auto text-gray-700 dark:text-white" data-aos="fade-up" data-aos-delay="100">
             Advanced IT Institute in Cambodia
           </p>
 
           <!-- MISSION -->
           <div class="flex items-center mt-4" data-aos="fade-up">
-            <i class="fa-solid fa-network-wired text-blue-500 text-3xl"></i>
-            <h2 class="text-2xl md:text-3xl font-bold ml-2">OUR MISSION</h2>
+            <i class="fa-solid fa-network-wired text-[#161179] text-3xl dark:text-red-600"></i>
+            <h2 class="text-2xl md:text-3xl font-bold ml-2 dark:text-white text-black">OUR MISSION</h2>
           </div>
 
-          <ul class="list-disc list-inside text-lg md:text-2xl ml-12 text-gray-700 space-y-2" data-aos="fade-up"
-            data-aos-delay="200">
-            <li>Provide the latest methodology with high-quality training and mentoring</li>
-            <li>Build up the capacity and career of IT experts in Cambodia</li>
-            <li>Empower graduates with job opportunities in leading tech companies</li>
+          <ul class="list-disc list-inside text-lg md:text-2xl m-auto text-gray-700 space-y-2 dark:text-white"
+            data-aos="fade-up" data-aos-delay="200">
+            <li class="text-justify">Provide the latest methodology with high-quality training and mentoring</li>
+            <li class="text-justify">Build up the capacity and career of IT experts in Cambodia</li>
+            <li class="text-justify">Empower graduates with job opportunities in leading tech companies</li>
           </ul>
         </section>
       </div>
 
       <!-- RIGHT IMAGE -->
-      <div class="flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
+      <div class="flex justify-center items-center max-lg:hidden" data-aos="fade-left" data-aos-duration="1000">
         <img src="image/istad.webp" alt="ISTAD Institute" class="rounded-xl shadow-xl max-w-full" />
       </div>
     </div>
@@ -137,29 +156,28 @@ container -->
     <div class="container_team mt-7">
 
       <!-- Section Title -->
-      <div class="flex items-center justify-center h-[100px]" data-aos="fade-down" data-aos-duration="1000">
-        <h1 class="text-4xl font-bold text-blue-700">Our Mentor</h1>
+      <div class="flex items-center justify-center h-[100px]">
+        <h1 class="text-4xl font-bold text-[#161179] dark:text-white">Our Mentor</h1>
       </div>
 
       <!-- Mentor Card -->
-      <div class="fist_teacher flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000"
-        data-aos-delay="200">
+      <div class="fist_teacher flex flex-col items-center" data-aos="zoom-in">
         <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
           <img src="image/teacher.webp" alt="Chan Chhaya profile" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-2xl font-bold text-center">Chan Chhaya</h3>
-        <p class="text-gray-500 text-center mb-2">Teacher</p>
+        <h3 class="text-2xl font-bold text-center dark:text-white text-black">Chan Chhaya</h3>
+        <p class="text-gray-500 text-center mb-2 dark:text-white">Teacher</p>
         <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-          <p class="text-blue-700 font-medium text-sm text-center">Senior Instructor</p>
+          <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">SENIOR INSTUCTOR</p>
         </div>
         <div class="flex space-x-4">
-          <a href="#" class="text-blue-600 hover:text-blue-800">
+          <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
             </svg>
           </a>
-          <a href="#" class="text-gray-800 hover:text-gray-600">
+          <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
               <path
@@ -176,33 +194,34 @@ container -->
 
 
       <div class="flex items-center justify-center h-[100px]">
-        <h1 class="text-4xl font-bold text-blue-700" data-aos="fade-down" data-aos-duration="1000">Our Teams Members
+        <h1 class="text-4xl font-bold text-[#161179] dark:text-white">Developer Team
         </h1>
       </div>
 
 
 
       <!-- the last section -->
-      <section class="flex justify-center gap-2.5 space-x-10">
+      <section class="grid max-sm:grid-cols-1 lg:grid-cols-5 grid-cols-3 m-auto justify-center gap-8"
+        data-aos="zoom-in">
         <!-- Team Member 5 -->
-        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col items-center justify-center">
           <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
             <img src="image/menglong.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold text-center">Keo Menglong</h3>
-          <p class="text-gray-500 text-center mb-2">MEMBER</p>
+          <h3 class="text-2xl font-bold text-center dark:text-white text-black">Keo Menglong</h3>
+          <p class="text-gray-500 text-center mb-2 dark:text-white">LEADER</p>
           <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-            <p class="text-blue-700 font-medium text-sm text-center">FRONT-END</p>
+            <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">DEVELOPER</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-facebook">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-github">
@@ -216,24 +235,24 @@ container -->
         </div>
 
 
-        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col items-center">
           <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
             <img src="image/chanthat.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold text-center"> Thouern chan that</h3>
-          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <h3 class="text-2xl font-bold text-center dark:text-white text-black"> Thouern chan that</h3>
+          <p class="text-gray-500 text-center mb-2 dark:text-white">MEMBER</p>
           <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-            <p class="text-blue-700 font-medium text-sm text-center">BACK-END</p>
+            <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">DEVELOPER</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-facebook">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-github">
@@ -248,24 +267,24 @@ container -->
 
 
         <!-- One memeber -->
-        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col items-center">
           <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
             <img src="image/ley.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold text-center">Pech Phakley</h3>
-          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <h3 class="text-2xl font-bold text-center dark:text-white text-black">Pech Phakley</h3>
+          <p class="text-gray-500 text-center mb-2 dark:text-white">MEMBER</p>
           <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-            <p class="text-blue-700 font-medium text-sm text-center">FRONT-END</p>
+            <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">DEVELOPER</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-facebook">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-github">
@@ -278,24 +297,24 @@ container -->
           </div>
         </div>
         <!-- One member  -->
-        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col items-center">
           <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
             <img src="image/teacher.webp" alt="Long Piseth profile" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold text-center">Lin Powin</h3>
-          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <h3 class="text-2xl font-bold text-center dark:text-white text-black">Lin Powin</h3>
+          <p class="text-gray-500 text-center mb-2 dark:text-white">MEMBER</p>
           <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-            <p class="text-blue-700 font-medium text-sm text-center">BACK-END</p>
+            <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">DEVELOPER</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-facebook">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-github">
@@ -309,24 +328,24 @@ container -->
         </div>
 
         <!-- Team Member 6 -->
-        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="flex flex-col items-center">
           <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
             <img src="image/sovanthong.JPG" alt="Sanh Panha profile" class="w-full h-full object-cover">
           </div>
-          <h3 class="text-2xl font-bold text-center"> Sovan Thong</h3>
-          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <h3 class="text-2xl font-bold text-center dark:text-white text-black"> Sovan Thong</h3>
+          <p class="text-gray-500 text-center mb-2 dark:text-white">MEMBER</p>
           <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
-            <p class="text-blue-700 font-medium text-sm text-center">UI/UX DESIGNER</p>
+            <p class="text-[#161179] font-medium text-sm text-center dark:text-[#161179]">DEVELOPER</p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="text-blue-600 hover:text-blue-800">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-facebook">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
             </a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">
+            <a href="#" class="text-[#161179] hover:text-blue-800 dark:text-white dark:hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="lucide lucide-github">
@@ -346,45 +365,52 @@ container -->
     </div>
 
     <!-- start the question and answer -->
-    <section class=" bg-white  h-[550px] mt-8 p-8 overflow-hidden" data-aos="zoom-in-up" data-aos-duration="1000"
-      data-aos-delay="200">
+    <section class=" bg-white dark:bg-gray-800 mt-8 lg:p-8 p-4 rounded-xl" data-aos="zoom-in-up"
+      data-aos-duration="1000" data-aos-delay="200">
 
-      <h1 class=" text-5xl text-blue-800 font-bold">If you have any questions, please feel free to contact us.</h1>
+      <h1 class="lg:text-5xl text-2xl text-[#161179] font-bold dark:text-white">If you have any questions, please feel
+        free to contact
+        us.</h1>
 
-      <div class="grid grid-cols-2 mt-8 ">
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-8 ">
         <div class="space-y-4">
           <div class="flex items-start space-x-3 text-2xl">
-            <i class="fas fa-map-marker-alt text-blue-600 mt-1  "></i>
-            <p class="text-blue-800">No. 24, St. 562, Sangkat Boeung Kak I, Khan Toul Kork, Phnom Penh, Cambodia</p>
+            <i class="fas fa-map-marker-alt text-[#161179] mt-1 dark:text-red-600"></i>
+            <p class="text-[#161179] dark:text-white">No. 24, St. 562, Sangkat Boeung Kak I, Khan Toul Kork, Phnom Penh,
+              Cambodia</p>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fab fa-facebook text-blue-600"></i>
-            <a href="https://www.facebook.com/istad.co" class="text-blue-800 hover:underline">Facebook</a>
+            <i class="fab fa-facebook text-[#161179] dark:text-red-600"></i>
+            <a href="https://www.facebook.com/istad.co"
+              class="text-[#161179] hover:underline dark:text-white">Facebook</a>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fab fa-youtube text-red-600"></i>
-            <a href="https://www.youtube.com/@istad7665" class="text-blue-800 hover:underline">YouTube</a>
+            <i class="fab fa-youtube text-[#161179] dark:text-red-600"></i>
+            <a href="https://www.youtube.com/@istad7665"
+              class="text-[#161179] hover:underline dark:text-white">YouTube</a>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fas fa-envelope text-gray-600"></i>
-            <a href="mailto:info.istad@gmail.com" class="text-blue-800 hover:underline">info.istad@gmail.com</a>
+            <i class="fas fa-envelope text-[#161179] dark:text-red-600"></i>
+            <a href="mailto:info.istad@gmail.com"
+              class="text-[#161179] hover:underline dark:text-white">info.istad@gmail.com</a>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fas fa-phone text-green-600"></i>
-            <span class="text-blue-800">(+855) 95 990 910 | (+855) 93 990 910</span>
+            <i class="fas fa-phone text-[#161179] dark:text-red-600"></i>
+            <span class="text-[#161179] dark:text-white">(+855) 95 990 910 | (+855) 93 990 910</span>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fab fa-telegram text-blue-500"></i>
-            <a href="https://t.me/istadckh" class="text-blue-800 hover:underline">Telegram</a>
+            <i class="fab fa-telegram text-[#161179] dark:text-red-600"></i>
+            <a href="https://t.me/istadckh" class="text-[#161179] hover:underline dark:text-white">Telegram</a>
           </div>
           <div class="flex items-center space-x-3 text-2xl">
-            <i class="fas fa-globe text-purple-600"></i>
-            <a href="https://www.cstad.edu.kh/" class="text-blue-800 hover:underline">www.cstad.edu.kh</a>
+            <i class="fas fa-globe text-[#161179] dark:text-red-600"></i>
+            <a href="https://www.cstad.edu.kh/"
+              class="text-[#161179] hover:underline dark:text-white">www.cstad.edu.kh</a>
           </div>
         </div>
 
-        <div class="w-[600px] h-[400pz] flex flex-end">
-          <iframe
+        <div class="flex justify-center">
+          <iframe class="rounded-2xl"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631404683705!2d104.89921187452717!3d11.578259843893386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1skm!2skh!4v1748962066075!5m2!1skm!2skh"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -429,6 +455,28 @@ container -->
       duration: 1000,
       once: true
     });
+  </script>
+  <script>
+    const btnMode = document.getElementById("btnMode");
+    btnMode.onclick = function () {
+      console.log("Change Mode");
+      const usedMode = localStorage.theme;
+      console.log("Used Mode", usedMode);
+      if (usedMode === "light") {
+        localStorage.theme = "dark";
+        btnMode.textContent = "Light Mode";
+      } else {
+        localStorage.theme = "light";
+        btnMode.textContent = "Dark Mode";
+      }
+
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    };
   </script>
 
 </body>
