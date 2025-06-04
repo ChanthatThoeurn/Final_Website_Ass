@@ -37,8 +37,8 @@
 
 </head>
 
-<body class="bg-gray-100 dark:bg-[#213555]">
-  <header
+<body class="dark:bg-[#213555] bg-gray-100">
+ <header
       class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#161179] sticky top-0"
     >
       <nav
@@ -669,19 +669,10 @@ container -->
 
 
 
-
-
-
-
-
-
-
-
-
   </div>
   <!-- end container -->
 
-  <footer class="bg-[#253c95] pt-3 text-white text-center text-sm md:text-left">
+  <footer class="bg-[#161179] pt-3 text-white text-center text-sm md:text-left">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-wrap justify-center">
 
@@ -830,27 +821,27 @@ container -->
     });
   </script>
   <script>
-    const btnMode = document.getElementById("btnMode");
-    btnMode.onclick = function () {
-      console.log("Change Mode");
-      const usedMode = localStorage.theme;
-      console.log("Used Mode", usedMode);
-      if (usedMode === "light") {
-        localStorage.theme = "dark";
-        btnMode.textContent = "Light Mode";
-      } else {
-        localStorage.theme = "light";
-        btnMode.textContent = "Dark Mode";
-      }
+      const btnMode = document.getElementById("btnMode");
+      btnMode.onclick = function () {
+        console.log("Change Mode");
+        const usedMode = localStorage.theme;
+        console.log("Used Mode", usedMode);
+        if (usedMode === "light") {
+          localStorage.theme = "dark";
+          btnMode.textContent = "Light Mode";
+        } else {
+          localStorage.theme = "light";
+          btnMode.textContent = "Dark Mode";
+        }
 
-      document.documentElement.classList.toggle(
-        "dark",
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      );
-    };
-  </script>
+        document.documentElement.classList.toggle(
+          "dark",
+          localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+        );
+      };
+    </script>
 
 </body>
 
