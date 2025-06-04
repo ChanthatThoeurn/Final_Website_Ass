@@ -1,55 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
-    <title>Elearning</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+
+  <title>Elearning</title>
 </head>
-<body>
+
+<body class="bg-gray-100">
   <header>
     <section>
-        <nav class="bg-sky-700 p-5 ">
-            <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-lg font-bold">Elearning</a>
-            <ul class="flex space-x-4">
-                <li><a href="Home_page.html" class="text-white hover:text-gray-400">Home</a></li>
-                <li><a href="Courses.html" class="text-white hover:text-gray-400">Courses</a></li>
-                <li><a href="About_Us.html" class="text-white hover:text-gray-400">About Us</a></li>
-                <li><a href="Course_Detail.html" class="text-white hover:text-gray-400">Contact</a></li>
-                <li><a href="Login_Register.html" class="text-white hover:text-gray-400">Login</a></li>
-            </ul>
-          </div>
-        </nav>  
+      <nav class="bg-sky-700 p-5 ">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="#" class="text-white text-lg font-bold">Elearning</a>
+          <ul class="flex space-x-4">
+            <li><a href="Home_page.html" class="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="Courses.html" class="text-white hover:text-gray-400">Courses</a></li>
+            <li><a href="About_Us.html" class="text-white hover:text-gray-400">About Us</a></li>
+            <li><a href="Course_Detail.html" class="text-white hover:text-gray-400">Contact</a></li>
+            <li><a href="Login_Register.html" class="text-white hover:text-gray-400">Login</a></li>
+          </ul>
+        </div>
+      </nav>
     </section>
   </header>
 
-    <!-- write your content here -->
-    <main>
-    <section class="bg-gray-100 py-10">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold text-center mb-6">Welcome to Elearning</h1>
-            <p class="text-center text-gray-700 mb-8">Explore our wide range of courses and enhance your skills.</p>
-            <div class="flex justify-center">
-                <a href="#" class="bg-sky-700 text-white px-6 py-3 rounded hover:bg-sky-600 transition duration-300">Get Started</a>
+  <!-- 
+container -->
+  <div class="m-auto w-[90%]">
+    <!-- Make sure you have AOS CSS in <head> and AOS JS at end of <body> -->
+    <section class="mb-10 text-center" data-aos="zoom-in" data-aos-duration="1000">
+      <h1 class="text-2xl text-red-500 font-bold mb-3">ABOUT US</h1>
+      <h1 class="text-5xl md:text-6xl text-blue-600 font-bold leading-snug">
+        INSTITUTION OF SCIENCE AND <br>
+        TECHNOLOGY ADVANCED <br>
+        DEVELOPMENT?
+      </h1>
+    </section>
+
+    <!-- MAIN CONTENT GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-10">
+
+      <!-- LEFT CONTENT -->
+      <div class="space-y-10">
+
+        <!-- WHY CHOOSE US -->
+        <section data-aos="fade-right" data-aos-duration="800">
+          <div class="flex items-start space-x-4">
+            <div class="w-2.5 h-30 bg-red-600"></div>
+            <div>
+              <p class="text-indigo-800 uppercase text-2xl font-semibold tracking-wide mb-1 ">
+                Why should you choose us?
+              </p>
+              <h1 class="text-4xl font-bold text-indigo-900 leading-tight">
+                ISTAD <br /> Institute
+              </h1>
             </div>
+          </div>
+        </section>
+
+        <!-- WHO ARE WE -->
+        <section class="flex items-center space-x-3" data-aos="fade-up" data-aos-duration="800">
+
+          <div class="flex items-center space-x-3 text-4xl">
+
+            <i class="fa-solid fa-diamond  text-gray-400 "></i>
+          </div>
+          <h1 class="text-black text-4xl md:text-5xl font-bold">WHO ARE WE?</h1>
+        </section>
+        <p class="text-lg md:text-2xl text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+          INSTITUTE is a noteworthy science and technology Institute in Cambodia. It has routed Cambodian students
+          to advanced science and technology, research, and development. Our graduates have been guaranteed excellent
+          job opportunities with top IT companies. We continue to provide high-quality training with modern methodology,
+          a strong roadmap, and are the best choice for future IT experts in Cambodia.
+        </p>
+
+        <!-- VISION & MISSION -->
+        <section class="space-y-4" data-aos="fade-left" data-aos-duration="800">
+          <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-3 text-4xl">
+
+              <i class="fa-solid fa-diamond  text-blue-800 "></i>
+            </div>
+            <h1 class="text-black text-4xl md:text-5xl font-bold">VISION & MISSION</h1>
+          </div>
+
+          <!-- VISION -->
+          <div class="flex items-center mt-4" data-aos="fade-up">
+            <i class="fa-solid fa-gem text-blue-500 text-3xl"></i>
+            <h2 class="text-2xl md:text-3xl font-bold ml-2">OUR VISION</h2>
+          </div>
+          <p class="text-lg md:text-2xl ml-9 text-gray-700" data-aos="fade-up" data-aos-delay="100">
+            Advanced IT Institute in Cambodia
+          </p>
+
+          <!-- MISSION -->
+          <div class="flex items-center mt-4" data-aos="fade-up">
+            <i class="fa-solid fa-network-wired text-blue-500 text-3xl"></i>
+            <h2 class="text-2xl md:text-3xl font-bold ml-2">OUR MISSION</h2>
+          </div>
+
+          <ul class="list-disc list-inside text-lg md:text-2xl ml-12 text-gray-700 space-y-2" data-aos="fade-up"
+            data-aos-delay="200">
+            <li>Provide the latest methodology with high-quality training and mentoring</li>
+            <li>Build up the capacity and career of IT experts in Cambodia</li>
+            <li>Empower graduates with job opportunities in leading tech companies</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="flex justify-center items-center" data-aos="fade-left" data-aos-duration="1000">
+        <img src="image/istad.webp" alt="ISTAD Institute" class="rounded-xl shadow-xl max-w-full" />
+      </div>
+    </div>
+
+    <!-- Team memebers -->
+
+
+
+
+
+
+    <!-- Our mentor and tean section -->
+    <div class="container_team mt-7">
+
+      <!-- Section Title -->
+      <div class="flex items-center justify-center h-[100px]" data-aos="fade-down" data-aos-duration="1000">
+        <h1 class="text-4xl font-bold text-blue-700">Our Mentor</h1>
+      </div>
+
+      <!-- Mentor Card -->
+      <div class="fist_teacher flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000"
+        data-aos-delay="200">
+        <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+          <img src="image/teacher.webp" alt="Chan Chhaya profile" class="w-full h-full object-cover">
         </div>
-    </main>
+        <h3 class="text-2xl font-bold text-center">Chan Chhaya</h3>
+        <p class="text-gray-500 text-center mb-2">Teacher</p>
+        <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+          <p class="text-blue-700 font-medium text-sm text-center">Senior Instructor</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-blue-600 hover:text-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-800 hover:text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+              </path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- team member -->
+
+
+
+      <div class="flex items-center justify-center h-[100px]">
+        <h1 class="text-4xl font-bold text-blue-700" data-aos="fade-down" data-aos-duration="1000">Our Teams Members
+        </h1>
+      </div>
+
+
+
+      <!-- the last section -->
+      <section class="flex justify-center gap-2.5 space-x-10">
+        <!-- Team Member 5 -->
+        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+            <img src="image/menglong.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl font-bold text-center">Keo Menglong</h3>
+          <p class="text-gray-500 text-center mb-2">MEMBER</p>
+          <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+            <p class="text-blue-700 font-medium text-sm text-center">FRONT-END</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+            <img src="image/chanthat.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl font-bold text-center"> Thouern chan that</h3>
+          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+            <p class="text-blue-700 font-medium text-sm text-center">BACK-END</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- One memeber -->
+        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+            <img src="image/ley.jpg" alt="Long Piseth profile" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl font-bold text-center">Pech Phakley</h3>
+          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+            <p class="text-blue-700 font-medium text-sm text-center">FRONT-END</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- One member  -->
+        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+            <img src="image/teacher.webp" alt="Long Piseth profile" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl font-bold text-center">Lin Powin</h3>
+          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+            <p class="text-blue-700 font-medium text-sm text-center">BACK-END</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Team Member 6 -->
+        <div class="flex flex-col items-center" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="w-48 h-48 rounded-full overflow-hidden mb-4">
+            <img src="image/sovanthong.JPG" alt="Sanh Panha profile" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-2xl font-bold text-center"> Sovan Thong</h3>
+          <p class="text-gray-500 text-center mb-2">TEAM</p>
+          <div class="bg-blue-100 px-4 py-1 rounded-md mb-4">
+            <p class="text-blue-700 font-medium text-sm text-center">UI/UX DESIGNER</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-600 hover:text-blue-800">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- end of ort team -->
+    </div>
+
+    <!-- start the question and answer -->
+    <section class=" bg-white  h-[550px] mt-8 p-8 overflow-hidden" data-aos="zoom-in-up" data-aos-duration="1000"
+      data-aos-delay="200">
+
+      <h1 class=" text-5xl text-blue-800 font-bold">If you have any questions, please feel free to contact us.</h1>
+
+      <div class="grid grid-cols-2 mt-8 ">
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3 text-2xl">
+            <i class="fas fa-map-marker-alt text-blue-600 mt-1  "></i>
+            <p class="text-blue-800">No. 24, St. 562, Sangkat Boeung Kak I, Khan Toul Kork, Phnom Penh, Cambodia</p>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fab fa-facebook text-blue-600"></i>
+            <a href="https://www.facebook.com/istad.co" class="text-blue-800 hover:underline">Facebook</a>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fab fa-youtube text-red-600"></i>
+            <a href="https://www.youtube.com/@istad7665" class="text-blue-800 hover:underline">YouTube</a>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fas fa-envelope text-gray-600"></i>
+            <a href="mailto:info.istad@gmail.com" class="text-blue-800 hover:underline">info.istad@gmail.com</a>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fas fa-phone text-green-600"></i>
+            <span class="text-blue-800">(+855) 95 990 910 | (+855) 93 990 910</span>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fab fa-telegram text-blue-500"></i>
+            <a href="https://t.me/istadckh" class="text-blue-800 hover:underline">Telegram</a>
+          </div>
+          <div class="flex items-center space-x-3 text-2xl">
+            <i class="fas fa-globe text-purple-600"></i>
+            <a href="https://www.cstad.edu.kh/" class="text-blue-800 hover:underline">www.cstad.edu.kh</a>
+          </div>
+        </div>
+
+        <div class="w-[600px] h-[400pz] flex flex-end">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631404683705!2d104.89921187452717!3d11.578259843893386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1skm!2skh!4v1748962066075!5m2!1skm!2skh"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </iframe>
+        </div>
+      </div>
+
+
+
+    </section>
 
 
 
 
-    
+
+
+
+
+
+
+
+
+  </div>
+  <!-- end container -->
+
   <footer>
     <section class="bg-sky-700 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2023 Elearning. All rights reserved.</p>
-            <ul class="flex justify-center space-x-4 mt-2">
-                <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-            </ul>
-        </div>
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Elearning. All rights reserved.</p>
+        <ul class="flex justify-center space-x-4 mt-2">
+          <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+        </ul>
+      </div>
     </section>
   </footer>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
 </body>
+
 </html>
