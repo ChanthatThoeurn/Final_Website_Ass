@@ -1,55 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
-    <title>Elearning</title>
-</head>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
+  </head>
+
 <body>
-  <header>
-    <section>
-        <nav class="bg-sky-700 p-5 ">
-            <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-lg font-bold">Elearning</a>
-            <ul class="flex space-x-4">
-                <li><a href="Home_page.html" class="text-white hover:text-gray-400">Home</a></li>
-                <li><a href="Courses.html" class="text-white hover:text-gray-400">Courses</a></li>
-                <li><a href="About_Us.html" class="text-white hover:text-gray-400">About Us</a></li>
-                <li><a href="Course_Detail.html" class="text-white hover:text-gray-400">Contact</a></li>
-                <li><a href="Login_Register.html" class="text-white hover:text-gray-400">Login</a></li>
-            </ul>
+  <header
+      class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#161179] sticky top-0"
+    >
+      <nav
+        class="relative w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-3"
+      >
+        <div
+          class="flex items-center justify-between duration-500 lg:hover:translate-y-[-5px] min-md:pl-5"
+        >
+          <a
+            class="flex-none font-semibold text-2xl text-white hover:text-gray-200 focus:outline-hidden focus:opacity-80"
+            href="../index.html"
+            aria-label="Brand"
+            >Dev</a
+          >
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-white/50 text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
+              id="hs-base-header-collapse"
+              aria-expanded="false"
+              aria-controls="hs-base-header"
+              aria-label="Toggle navigation"
+              data-hs-collapse="#hs-base-header"
+            >
+              <svg
+                class="hs-collapse-open:hidden size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block shrink-0 hidden size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+              <span class="sr-only">Toggle navigation</span>
+            </button>
           </div>
-        </nav>  
-    </section>
-  </header>
-
-    <!-- write your content here -->
-    <main>
-    <section class="bg-gray-100 py-10">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold text-center mb-6">Welcome to Elearning</h1>
-            <p class="text-center text-gray-700 mb-8">Explore our wide range of courses and enhance your skills.</p>
-            <div class="flex justify-center">
-                <a href="#" class="bg-sky-700 text-white px-6 py-3 rounded hover:bg-sky-600 transition duration-300">Get Started</a>
+        </div>
+        <div
+          id="hs-base-header"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
+          aria-labelledby="hs-base-header-collapse"
+        >
+          <div
+            class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
+          >
+            <div
+              class="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1"
+            >
+              <a
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="Courses.html"
+                aria-current="page"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                  <path
+                    d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                  />
+                </svg>
+                Courses
+              </a>
+              <a
+              class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="Contact_Us.html"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                Contact
+              </a>
+              <a
+                class="p-2 flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                href="About_Us.html"
+              >
+                <svg
+                  class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 12h.01" />
+                  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                  <rect width="20" height="14" x="2" y="6" rx="2" />
+                </svg>
+                About
+              </a>
+              <div
+                class="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5 mt-1 md:mt-0 md:ms-1.5 before:block before:absolute before:top-1/2 before:-start-px before:w-px before:h-4 before:bg-white/30 before:-translate-y-1/2"
+              >
+                <a
+                  class="p-2 w-full flex items-center text-[16px] text-white hover:text-gray-200 focus:outline-hidden focus:text-white duration-500 lg:hover:translate-y-[-5px]"
+                  href="Login_Register.html"
+                >
+                  <svg
+                    class="shrink-0 size-4 me-3 md:me-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  Log in
+                </a>
+              </div>
+              <div
+                class="flex min-md:px-5 max-sm:py-3 max-sm:pl-2 duration-500 lg:hover:scale-105"
+              >
+                <label class="inline-flex items-center cursor-pointer">
+                  <input
+                    id="btnMode"
+                    type="checkbox"
+                    value=""
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="relative w-11 h-6 bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"
+                  ></div>
+                </label>
+              </div>
             </div>
+          </div>
         </div>
-    </main>
+      </nav>
+    </header>
 
+<section class="h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] w-screen">
+  <section class="relative h-full w-screen overflow-hidden">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
 
+    <!-- YouTube iframe video background -->
+    <div class="relative w-full h-full">
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <iframe 
+          class="w-full h-full scale-[1.4]" 
+          src="https://www.youtube.com/embed/akNiONAuysg?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=akNiONAuysg&enablejsapi=1&version=3&playerapiid=ytplayer" 
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          frameborder="0">
+        </iframe>
+      </div>
+    </div>
 
+    <!-- Text and buttons overlay -->
+    <div class="absolute inset-0 flex items-center justify-start text-white z-20 p-4 md:p-6 lg:p-8 ml-4 sm:ml-6 md:ml-8 lg:ml-12">
+      <div class="flex flex-col items-start space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-2">
+        
+        <h1 
+          data-aos="fade-up-right" 
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight sm:leading-tight md:leading-snug lg:leading-snug aos-init aos-animate"
+        >
+          Institute of Science and <br>Technology Advanced <br>Development
+        </h1>
 
-    
-  <footer>
-    <section class="bg-sky-700 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2023 Elearning. All rights reserved.</p>
-            <ul class="flex justify-center space-x-4 mt-2">
-                <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-            </ul>
+        <div class="grid grid-rows-2 items-center">
+          
+          <a 
+            href="https://youtu.be/akNiONAuysg?si=0KXJEzUaccSDKfcL" 
+            target="_blank" 
+            data-aos-duration="1000" 
+            data-aos-delay="500" 
+            data-aos-offset="200" 
+            data-aos="fade-up" 
+            class="aos-init aos-animate"
+          >
+            <button 
+              type="button" 
+              data-aos="fade-up-right" 
+              class="flex items-center justify-center text-white-80 my-2 sm:my-2 sm:px-6 sm:py-3 rounded-lg hover:opacity-80 transition-opacity text-base sm:text-xl lg:text-2xl sm:font-bold aos-init aos-animate"
+            >
+              <div class="h-2 sm:h-3 w-10 sm:w-20 bg-error bg-left mr-4"></div>
+              <span>WATCH THE VIDEO</span>
+              <div class="bg-white-80 shadow-md rounded-full ml-2 border-solid">
+                <svg 
+                  stroke="currentColor" 
+                  fill="currentColor" 
+                  stroke-width="0" 
+                  viewBox="0 0 512 512" 
+                  class="icon w-8 h-8 text-secondary" 
+                  height="1em" 
+                  width="1em" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path>
+                </svg>
+              </div>
+            </button>
+          </a>
+
+          <a 
+            href="/register" 
+            target="_blank" 
+            data-aos="fade-up" 
+            class="aos-init aos-animate"
+          >
+            <button 
+              type="button" 
+              class="text-sm md:text-base border border-primary bg-lms-primary sm:mx-4 p-4 py-1.5 text-white-80 sm:mt-4 hover:text-white hover:bg-lms-primary/90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg sm:px-5 sm:py-2.5 text-center me-2 transition-colors duration-200"
+            >
+              <span class="button-text">Admission</span>
+            </button>
+          </a>
+
         </div>
-    </section>
+
+      </div>
+    </div>
+
+  </section>
+</section>
+
+
+  
+<main>
+    <br>
+    <br>
+    <div class="container mx-auto px-0">
+  <h3 class="text-2xl font-semibold mb-4">Available Courses</h3>
+
+  <div class="flex flex-wrap -mx-2 mb-5">
+
+    <!-- Flutter Mobile Development -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/895583ae-e133-46bf-8db3-04cfdab99c8d" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/899bac49-e47c-406c-abb2-30ad0b498f88.png" alt="Flutter course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">Flutter Mobile Development</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                Flutter course is designed to develop multi-platform like iOS and Android App, Web, Desktop apps like MacOS, Windows and Linux using one code base. We also include with UI / UX design concept. Moreover, integrate with third-party libraries and other mobile functionality to make your app more professional.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>80 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- iOS Development -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/132e94ce-ec12-4b2d-8147-e1013ca81886" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/4709913c-3dd4-4896-8b05-ba6f7fd074ba.png" alt="iOS course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">iOS Development</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                iOS Development is designed for students to get started with design iOS App Concepts. This course will focus on languages syntax since basic levels and start to implement real user interfaces following with great user experiences and integrate others iOS features.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>80 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SQL & Data Modeling -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/a590f6cc-ce85-43b7-aca4-52f51a851fc4" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/354762b5-e27a-40ac-93c3-6de5cdb0362f.png" alt="SQL course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">SQL &amp; Data Modeling with PostgreSQL</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                SQL &amp; Data Modeling with PostgreSQL is designed to help you understand in project analyze, database design and normalized data follow requirements from clients and Modeling the business flows. Please see the details course offers  below,
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>50 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Web Design -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/86dfaf6f-ce25-4dd7-911d-58215dada94b" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/3a3d2bf2-670b-4f2f-a72a-b9b8ba3a0f38.png" alt="Web Design course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">Web Design</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                Web Design course is designed for students to get started with Design Website Concepts. This course will focus on basic and advanced layout of website plus responsive design including UI/UX Design Concept. Moreover, CMS &amp; Dynamic content with hosting application to access in public.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>70 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Basic</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- DevOps Engineering -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/60ae0e6b-64a5-4fbe-bfc6-c0a908924bcb" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+                <img src="https://api.istad.co/media/image/835a7298-dbab-448d-8229-ee8a555c4846.png" class="img-md-fluid img-fluid" alt="...">            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">DevOps Engineering</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                DevOps Engineering course will guide you through the principles and practices of DevOps to improve collaboration and productivity by automating infrastructure, workflows, and continuously measuring application performance.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>60 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Intermediate</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Docker (converted) -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/0d566246-f367-4052-ab72-fd57634f163f" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/3d7beaad-309a-4f2f-91e2-b3be705ef3f6.png" alt="Docker course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">Docker</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                Docker is a containerized tool that designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. This course covers,
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>45 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Flutter Mobile Development -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/895583ae-e133-46bf-8db3-04cfdab99c8d" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/899bac49-e47c-406c-abb2-30ad0b498f88.png" alt="Flutter course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">Flutter Mobile Development</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                Flutter course is designed to develop multi-platform like iOS and Android App, Web, Desktop apps like MacOS, Windows and Linux using one code base. We also include with UI / UX design concept. Moreover, integrate with third-party libraries and other mobile functionality to make your app more professional.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>80 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- iOS Development -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/132e94ce-ec12-4b2d-8147-e1013ca81886" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/4709913c-3dd4-4896-8b05-ba6f7fd074ba.png" alt="iOS course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">iOS Development</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                iOS Development is designed for students to get started with design iOS App Concepts. This course will focus on languages syntax since basic levels and start to implement real user interfaces following with great user experiences and integrate others iOS features.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>80 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SQL & Data Modeling -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/a590f6cc-ce85-43b7-aca4-52f51a851fc4" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/354762b5-e27a-40ac-93c3-6de5cdb0362f.png" alt="SQL course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">SQL &amp; Data Modeling with PostgreSQL</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                SQL &amp; Data Modeling with PostgreSQL is designed to help you understand in project analyze, database design and normalized data follow requirements from clients and Modeling the business flows. Please see the details course offers  below,
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>50 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Medium</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Web Design -->
+    <div class="w-full md:w-1/2 px-2 mb-4">
+      <a href="/courses/86dfaf6f-ce25-4dd7-911d-58215dada94b" class="block">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row items-start md:items-center p-4 gap-4">
+            <div class="w-24 h-24 md:w-28 md:h-28 flex-shrink-0 flex justify-center items-center">
+              <img src="https://api.istad.co/media/image/3a3d2bf2-670b-4f2f-a72a-b9b8ba3a0f38.png" alt="Web Design course" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1">
+              <h6 class="text-lg font-semibold text-gray-800 mb-1">Web Design</h6>
+              <span class="inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2">20% Scholarship</span>
+              <p class="text-sm text-gray-600 line-clamp-4">
+                Web Design course is designed for students to get started with Design Website Concepts. This course will focus on basic and advanced layout of website plus responsive design including UI/UX Design Concept. Moreover, CMS &amp; Dynamic content with hosting application to access in public.
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex md:flex-col justify-between text-sm text-gray-700 mt-2 md:mt-0">
+              <p class="flex items-center gap-1 mb-1">
+                <i class="fas fa-clock text-gray-500"></i>
+                <span>70 hours</span>
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="fas fa-layer-group text-gray-500"></i>
+                <span>Basic</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+</main>
+
+
+
+ <footer class="bg-[#253c95] pt-3 text-white text-center text-sm md:text-left">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap justify-center">
+
+        <!-- Logo and Quote -->
+        <div class="w-full md:w-1/4 mb-6 flex flex-col items-center md:items-start">
+          <img src="../public/imag/Asset 1.svg" alt="S2 Logo" class="w-24 h-24 object-contain caret-amber-300">
+          <p class="mt-3">Start your  career with STUDENT SMART</p>
+        </div>
+
+        <!-- Learn More -->
+        <div class="w-full md:w-1/4 mb-6">
+          <p class="font-bold mb-2">Learn More</p>
+          <ul class="space-y-1">
+            <li><a href="../index.html" class="text-white hover:underline">Home Page</a></li>
+            <li><a href="Courses.html" class="text-white hover:underline">Course</a></li>
+            <li><a href="About_Us.html" class="text-white hover:underline">About Us</a></li>
+            <li><a href="/page/privacy-policy" class="text-white hover:underline">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- Contact Us -->
+        <div class="w-full md:w-1/4 mb-6">
+          <p class="font-bold mb-2">Contact Us</p>
+          <ul class="space-y-1">
+            <li><a href="#" class="text-white hover:underline">(+855) 978798818</a></li>
+            <li><a href="#" class="text-white hover:underline">(+855) 978798818</a></li>
+          </ul>
+          <div class="mt-3 space-x-4">
+            <a href="https://t.me/Chanthat_Thoeurn" target="_blank" class="text-white hover:underline">
+              <i class="fab fa-telegram pr-1"></i>Telegram
+            </a>
+            <a href="https://www.youtube.com/@c.t.x5888" target="_blank" class="text-white hover:underline">
+              <i class="fab fa-youtube pr-1"></i>YouTube
+            </a>
+          </div>
+        </div>
+
+        <!-- Facebook Embed -->
+        <div class="w-full md:w-1/4 mb-6">
+          <p class="font-bold mb-2">Follow Us</p>
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100089664771611&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1010668793170257"
+            width="250" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+
+      </div>
+
+      <hr class="border-t border-white opacity-50 mt-4">
+      <p class="text-center mt-2">
+        © <span>2025</span> STUDENT SMART | All Rights Reserved
+      </p>
+    </div>
   </footer>
+ <script>
+  const toggleSwitch = document.getElementById('switch-component');
+    const html = document.documentElement;
+
+    // Load saved theme and set checkbox state
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        toggleSwitch.checked = true;
+    }
+
+    // Toggle theme on checkbox change
+    toggleSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+<script>
+      const btnMode = document.getElementById("btnMode");
+      btnMode.onclick = function () {
+        console.log("Change Mode");
+        const usedMode = localStorage.theme;
+        console.log("Used Mode", usedMode);
+        if (usedMode === "light") {
+          localStorage.theme = "dark";
+          btnMode.textContent = "Light Mode";
+        } else {
+          localStorage.theme = "light";
+          btnMode.textContent = "Dark Mode";
+        }
+
+        document.documentElement.classList.toggle(
+          "dark",
+          localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+        );
+      };
+    </script>
 </body>
+
 </html>
