@@ -852,6 +852,11 @@
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
+    }
+  }
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
@@ -926,6 +931,11 @@
     @media (width >= 48rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
     }
   }
   .lg\:hidden {
